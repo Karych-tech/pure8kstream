@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pure8kstream.com/sitemap.xml

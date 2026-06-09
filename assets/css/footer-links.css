@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #11212d;
+}
+
+.policy-section {
+    padding: 40px 5%;
+    min-height: 80vh;
+}
+
+.policy-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.policy-card {
+    background-color: #fff;
+    padding: 20px 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.back-link {
+    display: inline-block;
+    color: #11212d;
+    text-decoration: none;
+    margin-bottom: 30px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.policy-card h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #11212d;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.policy-card h2 {
+    font-size: 1.5rem;
+    color: #392a07;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.policy-card h3 {
+    font-size: 1.2rem;
+    color: #334155;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.policy-card p {
+    color: #334155;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.policy-card a:not(.back-link) {
+    color: #4f46e5; /* Darker Indigo for better contrast ratio */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.policy-card a:not(.back-link):hover {
+    color: #11212d; /* High-contrast dark blue on hover instead of yellow */
+}
+
+.policy-card ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.policy-card ul li {
+    margin-bottom: 10px;
+    color: #444;
+    list-style-type: disc;
+}
+
+@media (max-width: 768px) {
+    .policy-card h1 {
+        font-size: 2.2rem;
+    }
+    .policy-card h2 {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,362 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     line-height: 1.6;
+ }
+
+ /* Football Hub specific styles */
+ .football-hero {
+     background: radial-gradient(circle at top left, rgba(252, 190, 41, 0.16), transparent 18%),
+         radial-gradient(circle at 88% 18%, rgba(18, 196, 255, 0.10), transparent 16%),
+         linear-gradient(180deg, #08141f 0%, #051017 100%);
+     color: #fff;
+     padding: 48px 0;
+ }
+
+ .football-hero .hero-inner {
+     display: flex;
+     align-items: center;
+     gap: 30px;
+ }
+
+ .football-hero .hero-text h1 {
+     font-size: 2.2rem;
+     margin: 0 0 12px 0;
+     color: #fff;
+ }
+
+ .football-hero .subtitle {
+     color: #e6fff1;
+     margin-bottom: 18px;
+ }
+
+ .football-hero .hero-media img {
+     width: 420px;
+     max-width: 40vw;
+     border-radius: 8px;
+     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+ }
+
+ .container {
+     max-width: 1100px;
+     margin: 0 auto;
+     padding: 60px 20px
+ }
+
+ .intro p {
+     line-height: 1.8;
+     color: #334155;
+     font-size: 1.1rem;
+     margin-bottom: 20px
+ }
+
+ .grid.cards {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+     gap: 18px
+ }
+
+ .card {
+     background: #fff;
+     border-radius: 12px;
+     padding: 24px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+     border-top: 4px solid #00b37a;
+     transition: transform 0.3s ease
+ }
+
+ .card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1)
+ }
+
+ .card h3 {
+     margin-top: 0;
+     color: #0b3b2f;
+     margin-bottom: 12px
+ }
+
+ .card p {
+     color: #334155;
+     font-size: 0.95rem
+ }
+
+ .card .link {
+     display: inline-block;
+     margin-top: 12px;
+     color: #00b37a;
+     text-decoration: none;
+     font-weight: 600
+ }
+
+ .club-list,
+ .player-list {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 12px;
+     list-style: none;
+     padding: 0;
+     margin-top: 20px
+ }
+
+ .club-list li,
+ .player-list li {
+     background: #ffffff;
+     padding: 12px 20px;
+     border-radius: 50px;
+     border: 1px solid #e2e8f0;
+     font-weight: 600;
+     color: #072a20;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+     transition: all 0.3s ease
+ }
+
+ .club-list li:hover,
+ .player-list li:hover {
+     border-color: #00b37a;
+     color: #00b37a;
+     background: #f0fdf4;
+     transform: translateY(-2px)
+ }
+
+ .guide-list {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+     gap: 15px;
+     list-style: none;
+     padding: 0;
+     margin-top: 20px
+ }
+
+ .guide-list li {
+     background: #fff;
+     padding: 18px;
+     border-radius: 10px;
+     border-left: 5px solid #00b37a;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+     color: #334155;
+     font-weight: 500
+ }
+
+ .glossary-list {
+     display: grid;
+     gap: 15px;
+     list-style: none;
+     padding: 0;
+     margin-top: 20px
+ }
+
+ .glossary-list li {
+     width: 100%;
+     padding: 20px;
+     background: #f8fafc;
+     border-radius: 10px;
+     border-bottom: none
+ }
+
+ .glossary-list li strong {
+     color: #00b37a;
+     display: block;
+     font-size: 1.15rem;
+     margin-bottom: 5px
+ }
+
+ /* Football Hub FAQ Accordion Styles */
+ .faq-section {
+     padding: 60px 0;
+     background-color: #f9fafb;
+ }
+
+ .faq-section h2 {
+     text-align: center;
+     margin-bottom: 40px;
+     color: #072a20;
+ }
+
+ .faq-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+     gap: 20px;
+ }
+
+ .faq-box {
+     background: #ffffff;
+     padding: 25px;
+     border-radius: 12px;
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+     transition: all 0.4s ease;
+     cursor: pointer;
+     border: 1px solid #f1f5f9;
+     border-left: 5px solid #00b37a;
+ }
+
+ .faq-box h3 {
+     font-size: 1.1rem;
+     margin: 0;
+     color: #072a20;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 15px;
+     line-height: 1.4;
+ }
+
+ .faq-box h3::after {
+     content: '+';
+     font-size: 1.5rem;
+     transition: transform 0.3s ease;
+     color: #00b37a;
+ }
+
+ .faq-box.active h3::after {
+     transform: rotate(45deg);
+ }
+
+ .faq-box p {
+     font-size: 0.95rem;
+     color: #4b5563;
+     max-height: 0;
+     overflow: hidden;
+     opacity: 0;
+     transition: all 0.4s ease;
+     margin-top: 0;
+ }
+
+ .faq-box.active p {
+     max-height: 300px;
+     opacity: 1;
+     margin-top: 15px;
+ }
+
+ .faq-box:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 8px 25px rgba(0, 255, 194, 0.15);
+ }
+
+ .future-pages ul {
+     columns: 2;
+     -webkit-columns: 2;
+     list-style: disc;
+     margin-left: 18px
+ }
+
+ .btn {
+     display: inline-block;
+     padding: 10px 16px;
+     border-radius: 6px;
+     text-decoration: none
+ }
+
+ .btn.primary {
+     background: linear-gradient(90deg, #00ffc2, #00b37a);
+     color: #00291a
+ }
+
+ /* Page-specific color tweaks to match main site */
+ body.football-page {
+     background: #ffffff;
+     color: #0b1220
+ }
+
+ @media (max-width:900px) {
+     .football-hero .hero-inner {
+         flex-direction: column;
+         text-align: center
+     }
+
+     .football-hero .hero-media img {
+         max-width: 90vw;
+         width: 320px
+     }
+ }
+
+ @media (max-width:480px) {
+     .football-hero .hero-text h1 {
+         font-size: 1.6rem
+     }
+
+     .card {
+         padding: 14px
+     }
+ }
+
+ /* small helpers */
+ .container h2 {
+     margin-top: 0;
+     color: #072a20;
+     font-size: 2rem;
+     margin-bottom: 30px;
+     position: relative;
+     padding-bottom: 12px;
+     text-align: center;
+ }
+
+ .container h2::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 60px;
+     height: 4px;
+     background: #fcbe29;
+     border-radius: 2px;
+ }
+
+ /* World Cup Countdown Styles */
+ .world-cup-countdown {
+     background: linear-gradient(135deg, #0b3b2f 0%, #072a20 100%);
+     color: #fff;
+     padding: 60px 0;
+     text-align: center;
+     margin-bottom: 20px;
+     border-bottom: 4px solid #00ffc2;
+     border-top: 4px solid #00ffc2;
+ }
+
+ .world-cup-countdown h2.wc-title {
+     color: #00ffc2;
+     margin-bottom: 15px;
+     font-size: 2.2rem;
+ }
+
+ .countdown-display {
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     margin-top: 25px;
+     flex-wrap: wrap;
+ }
+
+ .time-block {
+     background: rgba(255, 255, 255, 0.05);
+     padding: 15px 10px;
+     border-radius: 10px;
+     min-width: 90px;
+     border: 1px solid rgba(0, 255, 194, 0.2);
+ }
+
+ .time-block span {
+     display: block;
+     font-size: 2.2rem;
+     font-weight: 800;
+     color: #fcbe29;
+     line-height: 1;
+ }
+
+ .time-block p {
+     margin: 5px 0 0;
+     font-size: 0.8rem;
+     text-transform: uppercase;
+     color: #e6fff1;
+     letter-spacing: 1px;
+ }
