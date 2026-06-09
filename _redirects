@@ -1,0 +1,10 @@
+# Force file priority over folders
+/pages/how-to-install-iptv /pages/how-to-install-iptv.html 200
+/pages/how-to-install-iptv/ /pages/how-to-install-iptv.html 200
+
+# Standard clean URLs
+/pages/football /pages/football.html 200
+/pages/contact /pages/contact.html 200
+
+# Catch-all for any other pages in the pages folder
+/pages/* /pages/:splat.html 200
