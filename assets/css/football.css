@@ -71,32 +71,99 @@
      border-radius: 12px;
      padding: 24px;
      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-     border-top: 4px solid #007d56;
-     transition: transform 0.3s ease
+     border-top: 4px solid #007d56; /* Keep the accent border */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     position: relative; /* For the overlay */
+     overflow: hidden; /* Ensure background image doesn't spill */
+     color: #fff; /* Default text color for cards with background images */
+ }
+
+ /* Overlay for readability */
+ .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+    z-index: 1;
+    transition: background 0.3s ease;
  }
 
  .card:hover {
      transform: translateY(-5px);
-     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1)
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Darker shadow for dark cards */
+ }
+
+ .card:hover::before {
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay on hover */
  }
 
  .card h3 {
      margin-top: 0;
-     color: #0b3b2f;
-     margin-bottom: 12px
+     color: #fff; /* Ensure text is white */
+     margin-bottom: 12px;
+     position: relative; /* Bring text above overlay */
+     z-index: 2;
  }
 
  .card p {
-     color: #334155;
-     font-size: 0.95rem
+     color: #e0e0e0; /* Slightly off-white for body text */
+     font-size: 0.95rem;
+     position: relative; /* Bring text above overlay */
+     z-index: 2;
  }
 
  .card .link {
      display: inline-block;
      margin-top: 12px;
-     color: #007d56;
-     text-decoration: none;
-     font-weight: 600
+     color: #00ffc2; /* A brighter green for links */
+     text-decoration: underline; /* Make links more visible */
+     font-weight: 700; /* Make links bolder */
+     position: relative; /* Bring text above overlay */
+     z-index: 2;
+     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
+ }
+
+ /* Specific background images for each card */
+ .premier-league-card {
+    background-image: url('../images/slider-sports/premier_league.webp');
+    background-size: cover;
+    background-position: center;
+ }
+
+ .la-liga-card {
+    background-image: url('../images/slider-sports/laliga.webp');
+    background-size: cover;
+    background-position: center;
+ }
+
+ .serie-a-card {
+    background-image: url('../images/slider-sports/football.webp'); /* Generic football image */
+    background-size: cover;
+    background-position: center;
+ }
+
+ .bundesliga-card {
+    background-image: url('../images/slider-sports/bundesliga.webp');
+    background-size: cover;
+    background-position: center;
+ }
+
+ .ligue-1-card {
+    background-image: url('../images/slider-sports/ligue1-uber-eats.webp');
+    background-size: cover;
+    background-position: center;
+ }
+
+ .champions-league-card {
+    background-image: url('../images/slider-sports/football.webp'); /* Generic football image */
+    background-size: cover;
+    background-position: center;
+ }
+
+ .world-cup-card {
+    background-image: url('../images/slider-sports/football.webp'); /* Generic football image */
+    background-size: cover;
+    background-position: center;
  }
 
  .club-list,
