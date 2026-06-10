@@ -41,6 +41,7 @@
 
  .football-hero .hero-media img {
      width: 420px;
+     height: auto;
      max-width: 40vw;
      border-radius: 8px;
      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
@@ -70,7 +71,7 @@
      border-radius: 12px;
      padding: 24px;
      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-     border-top: 4px solid #00b37a;
+     border-top: 4px solid #007d56;
      transition: transform 0.3s ease
  }
 
@@ -93,7 +94,7 @@
  .card .link {
      display: inline-block;
      margin-top: 12px;
-     color: #00b37a;
+     color: #007d56;
      text-decoration: none;
      font-weight: 600
  }
@@ -122,8 +123,8 @@
 
  .club-list li:hover,
  .player-list li:hover {
-     border-color: #00b37a;
-     color: #00b37a;
+     border-color: #007d56;
+     color: #007d56;
      background: #f0fdf4;
      transform: translateY(-2px)
  }
@@ -141,7 +142,7 @@
      background: #fff;
      padding: 18px;
      border-radius: 10px;
-     border-left: 5px solid #00b37a;
+     border-left: 5px solid #007d56;
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
      color: #334155;
      font-weight: 500
@@ -164,7 +165,7 @@
  }
 
  .glossary-list li strong {
-     color: #00b37a;
+     color: #007d56;
      display: block;
      font-size: 1.15rem;
      margin-bottom: 5px
@@ -196,7 +197,7 @@
      transition: all 0.4s ease;
      cursor: pointer;
      border: 1px solid #f1f5f9;
-     border-left: 5px solid #00b37a;
+     border-left: 5px solid #007d56;
  }
 
  .faq-box h3 {
@@ -214,7 +215,7 @@
      content: '+';
      font-size: 1.5rem;
      transition: transform 0.3s ease;
-     color: #00b37a;
+     color: #007d56;
  }
 
  .faq-box.active h3::after {
