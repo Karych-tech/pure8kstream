@@ -1034,7 +1034,7 @@ header.scrolled {
   filter: drop-shadow(0 0 14px rgba(252, 190, 41, 0.45));
 }
 
-.footer-column h4 {
+.footer-column h3 {
   color: var(--accent);
   font-size: 1.1rem;
   margin-bottom: 25px;
