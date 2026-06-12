@@ -73,6 +73,13 @@ document.querySelectorAll('a[href]').forEach(anchor => {
   });
 });
 
+// Ensure the transition overlay is removed when navigating back via browser buttons
+window.addEventListener('pageshow', (event) => {
+  if (pageTransition) {
+    pageTransition.classList.remove('active');
+  }
+});
+
 // --- Statistic Counters Animation ---
 // Animates numbers from 0 to the value specified in the 'data-target' attribute
 const initCounters = section => {
