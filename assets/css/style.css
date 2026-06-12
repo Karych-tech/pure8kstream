@@ -74,6 +74,8 @@ picture,
 svg {
   display: block;
   max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 ::selection {

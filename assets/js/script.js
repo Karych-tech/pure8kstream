@@ -164,3 +164,13 @@ faqBoxes.forEach(box => {
     }
   });
 });
+
+// --- Image Protection ---
+// Discourage image downloading by disabling right-click and dragging on img elements
+document.addEventListener('contextmenu', event => {
+  if (event.target.tagName === 'IMG') event.preventDefault();
+}, false);
+
+document.addEventListener('dragstart', event => {
+  if (event.target.tagName === 'IMG') event.preventDefault();
+}, false);
