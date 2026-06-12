@@ -166,6 +166,20 @@
     background-position: center;
  }
 
+ .guide-card {
+    background: linear-gradient(145deg, #072a20, #0b3b2f) !important;
+    text-decoration: none !important;
+    border-top: 4px solid #fcbe29 !important; /* Golden accent for guide cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ }
+
+ .guide-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 255, 194, 0.1);
+ }
+
  .club-list,
  .player-list {
      display: flex;
@@ -213,6 +227,40 @@
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
      color: #334155;
      font-weight: 500
+ }
+
+ #world-cup-history {
+     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+     border-radius: 32px;
+     border: 1px solid #e2e8f0;
+     padding: 80px 40px;
+     margin-bottom: 60px;
+     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.04);
+     position: relative;
+ }
+
+ #world-cup-history h3 {
+     color: #072a20;
+     margin: 45px 0 20px;
+     font-size: 1.8rem;
+     font-weight: 700;
+     letter-spacing: -0.02em;
+ }
+
+ #world-cup-history .guide-list li {
+     background: #ffffff;
+     border-left: 6px solid #fcbe29; /* Golden accent for champions */
+     padding: 22px;
+     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+ }
+
+ #world-cup-history .guide-list li:hover {
+     transform: scale(1.02) translateX(8px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+ }
+
+ #world-cup-history p {
+     margin-bottom: 24px;
  }
 
  .glossary-list {
@@ -355,6 +403,10 @@
      .card {
          padding: 14px
      }
+
+     #world-cup-history {
+         padding: 40px 20px;
+     }
  }
 
  /* small helpers */
@@ -378,6 +430,45 @@
      height: 4px;
      background: #fcbe29;
      border-radius: 2px;
+ }
+
+ /* League Comparison Table Styles */
+ .league-table-container {
+     overflow-x: auto;
+     margin: 40px 0;
+     border-radius: 16px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+     border: 1px solid #e2e8f0;
+ }
+
+ .league-table {
+     width: 100%;
+     border-collapse: collapse;
+     background: #fff;
+     min-width: 750px;
+ }
+
+ .league-table th, .league-table td {
+     padding: 20px;
+     text-align: left;
+     border-bottom: 1px solid #f1f5f9;
+ }
+
+ .league-table th {
+     background-color: #072a20;
+     color: #fff;
+     font-weight: 700;
+     text-transform: uppercase;
+     font-size: 0.85rem;
+     letter-spacing: 0.05em;
+ }
+
+ .league-table tr:hover {
+     background-color: #f8fafc;
+ }
+
+ .league-table td strong {
+     color: #007d56;
  }
 
  /* World Cup Countdown Styles */
